@@ -28,3 +28,33 @@ body {
 .content {
     padding: 40px;
 }
+
+.push-btn {
+   position: fixed;
+    right: 50px;
+   bottom: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color:rgb(218, 184, 99);
+    border: none;
+    border-radius: 5px;
+}
+
+.input {
+    position: fixed;
+    padding: 10px;
+    font-size: 16px;
+    border-color: rgb(218, 184, 99);
+    border-radius: 5px;
+    bottom: 50px;
+    left: 50px;
+    background-color: transparent;
+    color: white;
+}
+
+.input:focus {
+    outline: none;
+    border-color: rgb(218, 184, 99);
+    box-shadow: 0 0 5px rgb(218, 184, 99);
+}

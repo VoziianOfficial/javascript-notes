@@ -9,6 +9,7 @@ import * as variables from "./topics/variables.js";
 import * as functions from "./topics/functions.js";
 import * as operators from "./topics/operators.js";
 import * as arrays from "./topics/arrays.js";
+import * as eventHandler from "./topics/eventHandler.js";
 
 //Создание объекта topics для быстрого доступа по имени
 const topics = {
@@ -16,6 +17,7 @@ const topics = {
     functions,
     operators,
     arrays,
+    eventHandler,
 };
 
 // dataset - Это способ передавать данные из HTML в JS.
