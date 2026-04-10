@@ -1,8 +1,6 @@
 export const description = "Event Handler in JavaScript";
 const pushButton = document.querySelector(".push-btn");
 const input = document.querySelector(".input");
-
-
 //============================= event handler =============================
 let count = 0;
 function onclickButton(el) {

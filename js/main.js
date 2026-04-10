@@ -10,6 +10,7 @@ import * as functions from "./topics/functions.js";
 import * as operators from "./topics/operators.js";
 import * as arrays from "./topics/arrays.js";
 import * as eventHandler from "./topics/eventHandler.js";
+import * as form from "./topics/form.js";
 
 //Создание объекта topics для быстрого доступа по имени
 const topics = {
@@ -18,6 +19,7 @@ const topics = {
     operators,
     arrays,
     eventHandler,
+    form,
 };
 
 // dataset - Это способ передавать данные из HTML в JS.
@@ -50,7 +52,10 @@ function loadTopic() {
 
     if (!topic) return;
 
-    content.innerHTML = `<h2>${topic.description}</h2>`;
+    content.innerHTML = `
+        <h2>${topic.description}</h2>
+        ${topic.renderForm ? topic.renderForm() : ""}
+    `;
 
     topic.examples.forEach(fn => fn());
     
