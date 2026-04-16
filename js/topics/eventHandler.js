@@ -19,7 +19,15 @@ function onInput(event) {
 
 input.addEventListener("input", onInput);
 
+// ============================= Confirm  ==============================
 
+// const isConfirm = confirm("Do you want to continue?");
+// console.log(isConfirm);
+ 
+// ============================= Prompt  ===============================
+
+// const name = prompt("Enter your name");
+// console.log(name);
 
 //============================= attributes for buttons =============================
 /*

@@ -66,6 +66,28 @@ Switch case - позволяет выполнить определенный б�
 
 // }
 
+
+// let cost;
+// const subscription = 'pro';
+
+// switch (subscription) {
+//     case 'free':
+//         cost = 0;
+//         break;
+//     case 'pro':
+//         cost = 100;
+//         break;
+//     case 'premium':
+//         cost = 200;
+//         break;
+//     default:
+//         console.log("Invalid subscription");
+        
+// }
+
+// console.log(cost);
+
+
 //============================== EXAMPLE TRY CATCH =============================
 /*
 Try-catch - используется для обработки ошибок, которые могут возникнуть в коде. 
@@ -131,6 +153,65 @@ try/catch → "если сломается → не упади"
 // for (let i = 0; i < arr.length; i++) {
 //     console.log("element " + (i+1) + ": " + arr[i]  );
 // }
+
+//========================================= TASKS =========================================================
+
+// const minutes = prompt("Enter minutes");
+
+
+// if (minutes >= 0 && minutes <= 14) {
+//     console.log("first quarter");
+// } else if (minutes >= 15 && minutes <= 29) {
+//     console.log("second quarter");  
+// } else if (minutes >= 30 && minutes <= 44) {
+//     console.log("third quarter");
+// } else if (minutes >= 45 && minutes <= 59) {
+//     console.log("fourth quarter");
+// }   
+
+
+// const value = prompt("Enter value").toLocaleLowerCase();
+// let prise;
+
+// switch (value) {
+//     case "apple":
+//         prise = 10;
+//         alert(`${value} prise: ${prise} UAH`);
+//         break;
+//     case "banana":
+//         prise = 20;
+//         alert(`${value} prise: ${prise} UAH`);
+//         break;
+//     case "orange":
+//         prise = 30;
+//         alert(`${value} prise: ${prise} UAH`);
+//         break;
+//     case "kiwi":
+//         prise = 40;
+//         alert(`${value} prise: ${prise} UAH`);
+//         break;
+//     case "lemon":
+//         prise = 50;
+//         alert(`${value} prise: ${prise} UAH`);
+//         break;
+//     default:
+//         alert("the product ${value} is out of stock");
+//         break;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const examples = [
     
