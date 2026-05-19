@@ -8,11 +8,11 @@ export const description = "Arrays in JavaScript:";
 push() - добавляет элемент в конец 
 pop() - удаляет последний элемент 
 unshift() - добавляет элемент в начало
-shift() - удаляет первый элемент 
+shift() - удаляет первый элемент
 
-indexOf - ищет индекс элемента
-lastIndexOf -ищет индекс с конца
-includes - проверяет есть ли элемент
+indexOf(c, 1) - ищет индекс элемента
+lastIndexOf(x, 1) -ищет индекс с конца
+includes() - проверяет есть ли элемент (true/false) 
 
 forEach() - перебирает массив
 map() - создаёт новый массив
@@ -23,9 +23,9 @@ findIndex() - возвращает индекс найденного элеме�
 some() - проверяет есть ли хотя бы один
 every() - проверяет все элементы. возвращает true или false
 
-slice() - копирует часть массива
+slice(1, 3) - копирует часть массива
 concat() - объединяет массивы и возвращает новый массив 
-splice() - удаляет/добавляет элементы
+splice(1,3) - удаляет/добавляет элементы
 join() - превращает массив в строку
 reverse() - переворачивает массив
 toString() - превращает в строку
@@ -33,7 +33,31 @@ sort() - сортирует массив от большего с меньшем
 Оператор "Spread" (...) - Три точки перед названием массива как бы «распаковывают» его. Они достают все числа из коробочки-массива и выкладывают их в ряд через запятую.
 */
 
+// Примитивные типы копируются по значению, а объекты (включая массивы) — по ссылке. 
 
+// let a = 5;
+// let b = a; // b получает копию значения a
+// a = 10; // изменение a не влияет на b
+// console.log("a", a); // 10
+// console.log("b", b); // 5
+
+
+// let arr_1 = [1, 2, 3];
+// let arr_2 = arr_1; // arr_2 получает ссылку на тот же массив, что и arr_1
+// arr_1.push(4); // изменение arr_1 влияет на arr_2, так как они ссылаются на один и тот же массив
+// console.log("arr_1", arr_1); // [1, 2, 3, 4]
+// console.log("arr_2", arr_2); // [1, 2, 3, 4]
+
+// arr_1.splice(2, 1); // c какого индекса и сколько удалить
+// console.log("arr_1", arr_1);
+
+// console.log(arr_1.length);
+
+
+
+
+
+ 
 //Одномерный массив
 // let arr = [5, "Bob", -10, 5.7, true];
 
@@ -387,6 +411,42 @@ let arr = ["r", "a", "c", "e", "c", "a", "r"]; //Проверить палинд
 
 
 ////////////////////////////////////////////////////
+let fruits = [
+    { id: 1, name: "apple" },
+    { id: 2, name: "banana" },
+    { id: 3, name: "orange" },
+    { id: 1, name: "apple" },
+    { id: 4, name: "kiwi" }]; 
+
+// console.log(fruits.find(fruit => fruit.id === 2));
+    
+// console.log(fruits.filter(fruit => fruit.name === "apple"));
+
+// let result = fruits.map(fruit => fruit.name.length);
+// console.log(result);
+
+// let names = "John, Anna, Bob, Kate";
+
+// let nameArray = names.split(", ")
+
+// console.log(nameArray);
+
+// let newNameArray = nameArray.join(", ");
+
+// console.log(newNameArray);
+
+let numbersArray = [1, 2, 3, 4, 5];
+
+let reduce = numbersArray.reduce((sum, item) => sum + item, 0);
+
+// console.log(reduce);
+
+
+let arr_1 = [11, 25, 39,10, 5, 17];
+
+let summa = arr_1.reduce((sum, item) => sum + item, 0) / arr_1.length;
+// console.log(summa);
+
 
 export const examples = [
 

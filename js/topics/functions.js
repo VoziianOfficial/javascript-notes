@@ -53,6 +53,63 @@ export const description = "Function in JavaScript";
 // }
 // localFunction();
 
+// ==================== Function declaration ====================
+
+
+function showMessage(name, age) { 
+    console.log("Hello!, " + name + ", " + age);
+};
+
+// showMessage("Alice", 25);
+
+// ==================== Function expression ====================
+
+let userName = "Bob";
+
+const sayHello = function () { 
+    let message = "Hello!, " + userName;
+    console.log(message);
+}
+
+// sayHello();
+
+// ==================== Arrow function ====================
+
+const greet = (name) => {
+    console.log("Hi, " + name);
+};
+
+// greet("Charlie");
+
+ 
+
+const sum = function (a, b) {
+    console.log("a:", a);
+    console.log("b:", b);
+    const c = a + b;
+    return c;
+
+};
+
+// sum(5, 8);
+
+
+
+const a = function () {
+    c();
+    console.log("a");
+    b();
+}
+
+const b = function () {
+    console.log("b");
+}
+
+const c = function () {
+    console.log("c");
+}
+
+// a();
 
 
 export const examples = [
