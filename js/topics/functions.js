@@ -95,23 +95,133 @@ const sum = function (a, b) {
 
 
 
-const a = function () {
-    c();
-    console.log("a");
-    b();
-}
+// const a = function () {
+//     c();
+//     console.log("a");
+//     b();
+// }
 
-const b = function () {
-    console.log("b");
-}
+// const b = function () {
+//     console.log("b");
+// }
 
-const c = function () {
-    console.log("c");
-}
+// const c = function () {
+//     console.log("c");
+// }
 
 // a();
+
+
+
+// ==================== Arguments and parameters ====================
+
+const addName = function (...names) {
+    // const arg = Array.from(arguments);
+    // console.log(arg);
+    console.log(names);
+    
+}
+
+// addName("David", "Eve", "Frank", "Grace");
+
+//===================== Callback functions ====================
+//Функция, которая принимакет в качестве аргумента другую функцию и может быть вывана позже или не вызвана вовсе, если действие не произошло.
+
+function ask(question, yes, no) {
+    if (confirm(question)) {
+        yes();
+    } else {
+        no();
+    }
+}
+
+function Showyes() {
+    console.log("Yes!");
+}
+
+function Showno() {
+    console.log("No!");
+}
+
+
+// ask("yes or no?", Showyes, Showno);
+
+
+const hello = function (name) {
+    console.log(`Hello, ${name}!`);
+}
+
+const searchName = function (callback) {
+const  name = "Vova";
+callback(name);
+}
+
+// searchName(hello);
+
+function checkAge(age) {
+    if (age >= 18) {
+        return alert("Hello, you are an adult!");
+    } else {
+        return alert("Sorry, you are too young.");
+    }
+}
+
+const searchAge = function (callback) {
+    const age = prompt("Please enter your age: ");
+    callback(Number(age));
+}
+
+// searchAge(checkAge);
+
+// ==================== arrow functions ====================
+// В отличие от обычных функций, у стрелочных функций нет this, arguments, super и new.target. 
+// Они не могут быть использованы как конструкторы и не имеют доступа к объекту arguments. 
+// Стрелочные функции всегда анонимные.
+
+const age = (age) => {
+    if (age >= 18) {
+        return alert("Hello, you are an adult!");
+    } else {
+        return alert("Sorry, you are too young.");
+    }
+}
+
+// age(20);
+
+// const a = () => {
+//     console.log("a");
+// }
+
+// const b = () => {
+//     console.log("b");
+// }
+
+// const c = () => {
+//     console.log("c");
+//     a();
+//     b();    
+// }
+
+// c();
 
 
 export const examples = [
     
 ];
+
+// ===================== Document ====================
+
+const addNumber = (number) => {
+ const sum = number + 10;
+ return console.log(sum);
+}
+
+const numberRef = document.querySelector('input[name="number"]');
+const buttonRef = document.querySelector('.button-input');
+
+buttonRef.addEventListener('click', () => {
+    addNumber(Number(numberRef.value));
+});
+
+
+console.log(buttonRef);

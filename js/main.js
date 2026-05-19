@@ -66,6 +66,13 @@ function loadTopic() {
 }
 
 
+const inputPageBtn = document.getElementById("input-page-btn");
+if (inputPageBtn) {
+    inputPageBtn.addEventListener("click", function () {
+        window.location.href = "/input.html";
+    });
+}
+
 // 3️⃣ Слушаем изменение URL
 window.addEventListener("hashchange", loadTopic);
 
