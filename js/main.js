@@ -69,7 +69,7 @@ function loadTopic() {
 const inputPageBtn = document.getElementById("input-page-btn");
 if (inputPageBtn) {
     inputPageBtn.addEventListener("click", function () {
-        window.location.href = "/input.html";
+        window.location.href = "./input.html";
     });
 }
 

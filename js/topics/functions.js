@@ -205,10 +205,6 @@ const age = (age) => {
 // c();
 
 
-export const examples = [
-    
-];
-
 // ===================== Document ====================
 
 const addNumber = (number) => {
@@ -219,9 +215,99 @@ const addNumber = (number) => {
 const numberRef = document.querySelector('input[name="number"]');
 const buttonRef = document.querySelector('.button-input');
 
-buttonRef.addEventListener('click', () => {
-    addNumber(Number(numberRef.value));
-});
+if (buttonRef && numberRef) {
+    buttonRef.addEventListener('click', () => {
+        addNumber(Number(numberRef.value));
+    });
+}
 
 
 console.log(buttonRef);
+
+//===================== Замыкания ====================
+
+// function createNewSum(n) {
+//     return function () {
+//         console.log(10 * n);
+//     }
+// };
+
+// const calc = createNewSum(5);
+// calc();
+
+
+function createUrl(domain) {
+    return function (url) {
+       return `https://${url}.${domain}`;
+    }
+};
+
+
+// const comUrl = createUrl("com");
+// console.log(comUrl("google"));
+
+
+//===================== this ====================
+
+
+// function helloThis () {
+//     console.log("hello", this);
+// }
+
+// helloThis();
+
+// const user = {
+//     name: "Alice",
+//     age: 30,
+//     sayHello: helloThis,
+// }
+
+// user.sayHello();
+
+
+// function abc() {
+//     console.log(this);
+// }
+
+// abc();
+
+// document.querySelector("p").onclick = abc;
+
+// function changeColor() {
+//     console.log(this);
+//     this.style.background = "red";
+// }
+
+// // document.querySelector(".changeColorBlock").onclick = changeColor;
+//  let user = document.querySelectorAll(".changeColorBlock");
+
+// user.forEach(function (element) {
+//     element.onclick = changeColor;
+// }); 
+
+
+//===================== arrow functions ====================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const examples = [
+    
+];
+
