@@ -533,31 +533,136 @@ let userName = "Bob";
 
 
 
-class Bank {
-    static type = "bank";
-    constructor(options) {
-        this.name = options.name;
-        this.ageWorks = options.ageWorks;
-        this.deposit = options.deposit;
+// class Bank {
+//     static type = "bank";
+//     constructor(options) {
+//         this.name = options.name;
+//         this.ageWorks = options.ageWorks;
+//         this.deposit = options.deposit;
+//     }
+// }
+
+
+// class newBank extends Bank {
+//     constructor(options) {
+//         super(options);
+//        this.methodPay = options.methodPay;
+//    }
+// }
+
+// const monobank = new newBank({
+//     name: "Monobank",
+//     ageWorks: 16,
+//     deposit: 1000,
+//     methodPay: "card",
+// });
+
+// console.log(monobank);
+
+
+
+//===================== get and set ====================
+
+
+//get - получить информацию из обьекта;
+//set - изменить информацию внутри обьекта;
+
+
+// class User {
+//     constructor(props) {
+//         this.name = props.name;
+//     }
+
+//     firstName = "";
+//     lastName = "";
+//     age = 0;
+//     city = "";
+
+//     set name(newName) {
+//         const nameRow = newName.split(" ");
+//         this.firstName = nameRow[0];
+//         this.lastName = nameRow[1];
+//     }
+
+//     get name() {
+//         return `First name: ${this.firstName}, Last name: ${this.lastName}`;
+//     }
+// }
+
+// const Kris = new User({
+//     name: "Kris Smith",
+// });
+
+// const Maria = new User({
+//     name: "John Doe",
+// })
+
+
+// console.log(Kris);
+
+
+//===================== Pototype =====================
+
+
+// const a = {
+//     x: 1,
+//     y: 2,
+// };
+
+// const b = Object.create(a);
+
+// console.log(b);
+
+
+// const Manager = function (name, sales) {
+//     this.name = name;
+//     this.sales = sales;
+
+//     // this.sale = function () {
+//     //     this.sales += 1;
+//     // }
+// };
+
+// const Anna = new Manager("Anna", 5);
+// const Bob = new Manager("Bob", 10);
+
+
+// console.log(Anna.sales);
+// Anna.sale();
+// console.log(Anna.sales);
+
+
+// Manager.prototype.sale = function () {
+//     this.sales += 1;
+// }
+
+// console.log(Anna.sales);
+// Anna.sale();
+// console.log(Anna.sales);
+
+// console.dir(Manager);
+
+
+class CoffeeMachine {
+    _water = 0;
+    constructor(power) {
+        this.power = power;
+    }
+
+    set waterAmount(value) {
+        if (value < 0) {
+            value = 0;
+        }
+
+        this._water = value;
     }
 }
 
+let coffeeMachine = new CoffeeMachine(100);
 
-class newBank extends Bank {
-    constructor(options) {
-        super(options);
-       this.methodPay = options.methodPay;
-   }
-}
+coffeeMachine.waterAmount = 20;
+console.log(coffeeMachine);
 
-const monobank = new newBank({
-    name: "Monobank",
-    ageWorks: 16,
-    deposit: 1000,
-    methodPay: "card",
-});
-
-console.log(monobank);
 
 
 
