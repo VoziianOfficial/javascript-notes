@@ -643,30 +643,120 @@ let userName = "Bob";
 // console.dir(Manager);
 
 
-class CoffeeMachine {
-    _water = 0;
-    constructor(power) {
-        this.power = power;
-    }
+// class CoffeeMachine {
+//     _water = 0;
+//     constructor(power) {
+//         this.power = power;
+//     }
 
-    set waterAmount(value) {
-        if (value < 0) {
-            value = 0;
-        }
+//     set waterAmount(value) {
+//         if (value < 0) {
+//             value = 0;
+//         }
 
-        this._water = value;
-    }
-}
+//         this._water = value;
+//     }
+// }
 
-let coffeeMachine = new CoffeeMachine(100);
+// let coffeeMachine = new CoffeeMachine(100);
 
-coffeeMachine.waterAmount = 20;
-console.log(coffeeMachine);
-
-
+// coffeeMachine.waterAmount = 20;
+// console.log(coffeeMachine);
 
 
+//================================= TASKS =========================================================
+// class CircleBox {
+//     constructor(selector) {
+//         this.$element = document.querySelector(selector);
+//     }
 
+//     show() {
+//         this.$element.style.display = "block";
+//     }
+
+//     hide() {
+//         this.$element.style.display = "none";
+//     }
+// }
+
+// class CircleItem extends CircleBox {
+//     constructor(options) {
+//         super(options.selector);
+
+//         this.$element.style.width = options.size + "px";
+//         this.$element.style.height = options.size + "px";
+//         this.$element.style.borderRadius = "50%";
+//         this.$element.style.background = options.color;
+//     }
+// }
+
+// const circleRed = new CircleItem({
+//     selector: "#circleRed",
+//     color: "red",
+//     size: 50
+// });
+
+// const circleYellow = new CircleItem({
+//     selector: "#circleYellow",
+//     color: "yellow",
+//     size: 80
+// });
+
+// const circleGreen = new CircleItem({
+//     selector: "#circleGreen",
+//     color: "green",
+//     size: 30
+// });
+
+////////////////////////////////////////////////
+
+// function Car(name, color, speed) {
+//     this.name = name;
+//     this.color = color;
+//     this.speed = speed;
+// }
+
+// Car.prototype.message = function () {
+//     console.log(`${this.name} is ${this.color} and speed ${this.speed}`);
+// }
+
+// Car.prototype.start = function () {
+//     console.log(`${this.name} is started`);
+// }
+
+
+
+// const Tesla = new Car("Tesla", "red", 100); 
+
+// const BMW = new Car("BMW", "black", 80);
+
+
+
+// window.Tesla = Tesla;
+// window.BMW = BMW;
+
+//================================== MIXIN =========================================================
+
+// let message = {
+//     messageHello() {
+//         console.log(`Hello, ${this.name}`);
+//     },
+
+
+//     messageBye() {
+//         console.log(`Bye, ${this.name}`);
+//     }
+// };
+
+// class User {
+//     constructor(name) {
+//         this.name = name;
+//     }
+// }
+
+// Object.assign(User.prototype, message);
+
+// new User("Nikita").messageHello();
 
 
 
